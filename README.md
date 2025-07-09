@@ -36,13 +36,13 @@ Este proyecto implementa un **agente de IA completo para jugar Pong** usando C++
 
 ### Requisitos e instalación
 
-1. **Compilador**: GCC 11 o superior
+1. **Compilador**:
+- g++ con soporte C++20 o superior
+- Clang++ 12+ (alternativo)
+- MSVC 2022 (Windows)
 2. **Dependencias**:
-
-   * CMake 3.18+
-   * Eigen 3.4
-   * \[Otra librería opcional]
-    
+- Solo C++20 Standard Library (sin dependencias externas)
+- Opcional: CMake 3.20+ para build system alternativo
 3. **Instalación**:
 
 ### **Opción 1: Build Automático (Recomendado)**
@@ -78,22 +78,27 @@ make run_tests  # Ejecutar suite de tests
 
 ### 1. Investigación teórica
 
-* **Objetivo**: Desarrollar un agente inteligente capaz de jugar Pong mediante técnicas de aprendizaje automático, implementando desde cero tanto la infraestructura de álgebra tensorial como el framework de redes neuronales, con el propósito de comprender profundamente los fundamentos algorítmicos guiados de una red neuronal.
-* **Contenido de ejemplo**:
+**Objetivo**: Desarrollar un agente inteligente capaz de jugar Pong mediante técnicas de aprendizaje automático, implementando desde cero tanto la infraestructura de álgebra tensorial como el framework de redes neuronales, con el propósito de comprender profundamente los fundamentos algorítmicos guiados de una red neuronal.
 
-  1. Historia y evolución de las NNs.
-  2. Principales arquitecturas: MLP, CNN, RNN.
-  3. Algoritmos de entrenamiento: backpropagation, optimizadores.
+**Contenido de ejemplo**:
 
----
+* Álgebra Tensorial: Operaciones N-dimensionales con broadcasting automático
+* Redes Neuronales: Forward/backward propagation con optimización por gradiente descendente
+* Funciones de Activación: ReLU con propiedades matemáticas específicas para evitar vanishing gradients
+* Algoritmos de Optimización: SGD con momentum adaptativo y early stopping
 
 ### 2. Diseño e implementación
 
 #### 2.1 Arquitectura de la solución
 
-* **Patrones de diseño**: ejemplo: Factory para capas, Strategy para optimizadores.
+**Patrones de diseño**:
+* Strategy Pattern: Intercambio de funciones de activación y pérdida
+* Factory Pattern: Creación de layers con configuración flexible
+* Template Method: Pipeline de entrenamiento con hooks personalizables
+* RAII Pattern: Gestión automática de memoria para tensores
+* Observer Pattern: Monitoreo de métricas durante entrenamiento
 
-* **Estructura de carpetas**:
+**Estructura de carpetas**:
 
 ```plaintext
 pong_ai/
