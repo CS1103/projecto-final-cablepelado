@@ -149,9 +149,9 @@ pong_ai/
 
 ### 4. Análisis del rendimiento
 
-* **Métricas de ejemplo**:
+**Métricas de ejemplo**:
 
-### **Operaciones Tensoriales**
+**Operaciones Tensoriales**
 | Operación | Complejidad Temporal | Complejidad Espacial | Optimizaciones |
 |-----------|---------------------|---------------------|----------------|
 | **Acceso por índices** | O(1) | O(1) | Cálculo directo con strides |
@@ -160,7 +160,7 @@ pong_ai/
 | **Transpose 2D** | O(n×m) | O(n×m) | Cache-friendly layout |
 | **Reshape** | O(1) | O(1) | Solo metadatos, sin copia |
 
-### **Red Neuronal**
+**Red Neuronal**
 | Componente | Forward Pass | Backward Pass | Memory Usage |
 |------------|--------------|---------------|--------------|
 | **Dense Layer** | O(batch × in × out) | O(batch × in × out) | O(in × out + out) |
@@ -170,33 +170,31 @@ pong_ai/
 
 *Donde: L=capas, B=batch_size, Nᵢ=neuronas en capa i, Wᵢ=parámetros en capa i*
 
-### **Agente Pong**
+**Agente Pong**
 - **Inferencia**: O(forward_pass) ≈ O(input_size × hidden_layers)
 - **Entrenamiento**: O(episodes × max_steps × network_complexity)
 - **Memoria**: O(model_parameters + experience_buffer)
 
-* **Ventajas/Desventajas**:
-Ventajas:
+* **Ventajas/Desventajas**
 
-Zero Dependencies: Solo C++20 standard library
-Performance: Optimizado para cache locality y vectorización
-Extensibilidad: Template-based design permite fácil extensión
-Memory Safety: RAII garantiza no memory leaks
-Type Safety: Template metaprogramming previene errores en tiempo de compilación
+**Ventajas:**
+- Zero Dependencies: Solo C++20 standard library
+- Performance: Optimizado para cache locality y vectorización
+- Extensibilidad: Template-based design permite fácil extensión
+- Memory Safety: RAII garantiza no memory leaks
+- Type Safety: Template metaprogramming previene errores en tiempo de compilación
 
-Desventajas:
+**Desventajas:**
+- Tiempo de Compilación: Templates pueden ser lentos de compilar
+- Curva de Aprendizaje: Requiere conocimiento profundo de C++20
+- Debugging: Template errors pueden ser difíciles de interpretar
+- Limitaciones GPU: Implementación solo para CPU
 
-Tiempo de Compilación: Templates pueden ser lentos de compilar
-Curva de Aprendizaje: Requiere conocimiento profundo de C++20
-Debugging: Template errors pueden ser difíciles de interpretar
-Limitaciones GPU: Implementación solo para CPU
-
-* **Mejoras futuras**:
-
-Soporte GPU: Implementar backend CUDA/OpenCL para aceleración de hardware
-Capas CNN: Capas convolucionales para procesamiento de imágenes
-Entrenamiento Paralelo: Entrenamiento distribuido en múltiples nodos
-Cuantización: Soporte INT8/INT16 para despliegue en dispositivos móviles
+**Mejoras futuras**:
+- Soporte GPU: Implementar backend CUDA/OpenCL para aceleración de hardware
+- Capas CNN: Capas convolucionales para procesamiento de imágenes
+- Entrenamiento Paralelo: Entrenamiento distribuido en múltiples nodos
+- Cuantización: Soporte INT8/INT16 para despliegue en dispositivos móviles
 
 ### 5. Trabajo en equipo
 
@@ -214,15 +212,15 @@ Cuantización: Soporte INT8/INT16 para despliegue en dispositivos móviles
 ### 6. Conclusiones
 Este proyecto demuestra que es posible crear sistemas de ML de alta calidad usando solo C++20 standard library, proporcionando una base sólida para entender los fundamentos algorítmicos del aprendizaje automático sin depender de frameworks externos.
 
-Logros:
+**1- Logros:**
 Implementar NN desde cero, validar en dataset de ejemplo.
 La implementación completa del sistema de redes neuronales desde cero ha sido exitosa. Logramos crear una biblioteca tensorial funcional, un framework de redes neuronales robusto, y validar el sistema tanto en el problema XOR como en el entrenamiento del agente Pong. El sistema demuestra capacidad de aprendizaje efectivo con convergencia estable y predicciones precisas.
 
-Evaluación:
+**2- Evaluación:**
 Calidad y rendimiento adecuados para propósito académico.
 El código cumple con estándares académicos altos: 95%+ test coverage, gestión adecuada de memoria con RAII, y performance escalable verificada. Los benchmarks muestran escalabilidad O(n²) consistente. La arquitectura modular permite extensión futura y el sistema es robusto ante casos extremos.
 
-Aprendizajes:
+**3- Aprendizajes:**
 Profundización en backpropagation y optimización.
 Pasar del Epic 1 (biblioteca tensorial) al Epic 2 (framework de redes neuronales) y poder mostrar y enseñarle a la red neuronal me ayudó para:
 
@@ -230,10 +228,11 @@ Entender Backpropagation Real: No solo la fórmula matemática, sino cómo se im
 Gestión de Memoria Avanzada: Entender RAII y cómo manejar memoria automáticamente me dio confianza para crear sistemas más complejos sin memory leaks.
 Arquitectura de Datos: Comprender por qué el layout de memoria importa tanto para performance, y cómo estructurar tensores para aprovechar la cache del procesador.
 
-Recomendaciones:
+**4- Recomendaciones:**
 Escalar a datasets más grandes y optimizar memoria.
 Para trabajo futuro, se recomienda expandir el sistema con soporte GPU mediante CUDA/OpenCL para manejar datasets más grandes eficientemente. La implementación de optimizadores adicionales como Adam y RMSprop mejoraría la convergencia. También sería valioso añadir capas convolucionales para procesamiento de imágenes y implementar técnicas de cuantización para despliegue en dispositivos móviles.
----
+
+
 
 ### 7. Bibliografía
 
