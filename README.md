@@ -4,7 +4,7 @@
 
 ### **Descripción**
 
-> Ejemplo: Implementación de una red neuronal multicapa en C++ para clasificación de dígitos manuscritos.
+> Este proyecto implementa un agente de IA para jugar Pong usando C++20. El sistema incluye una biblioteca genérica de álgebra tensorial, un framework de redes neuronales completo, y un agente inteligente capaz de jugar Pong.
 
 ### Contenidos
 
@@ -23,17 +23,15 @@
 ### Datos generales
 
 * **Tema**: Redes Neuronales en AI
-* **Grupo**: `group_3_custom_name`
+* **Grupo**: `Grupo: Cable Pelado`
 * **Integrantes**:
 
-  * Alumno A – 209900001 (Responsable de investigación teórica)
-  * Alumno B – 209900002 (Desarrollo de la arquitectura)
-  * Alumno C – 209900003 (Implementación del modelo)
-  * Alumno D – 209900004 (Pruebas y benchmarking)
-  * Alumno E – 209900005 (Documentación y demo)
-
-> *Nota: Reemplazar nombres y roles reales.*
-
+  * Juan Marcelo Ferreyra Gonzales – 202410166 (Responsable de investigación teórica)
+  * Diego Mauricio Alarcon Valle – 209900002 (Desarrollo de la arquitectura)
+  * Mathias Rolando Castro Alba – 209900003 (Implementación del modelo)
+  * Joaquin ALberto Mercado Guerra – 209900004 (Pruebas y benchmarking)
+  * Marco Joaquin Soto Maceda – 209900005 (Documentación y demo)
+  * Valentino Alonso Contreras Traverso - - 
 ---
 
 ### Requisitos e instalación
@@ -74,16 +72,34 @@
 #### 2.1 Arquitectura de la solución
 
 * **Patrones de diseño**: ejemplo: Factory para capas, Strategy para optimizadores.
+
+  
 * **Estructura de carpetas (ejemplo)**:
 
   ```
-  proyecto-final/
-  ├── src/
-  │   ├── layers/
-  │   ├── optimizers/
-  │   └── main.cpp
-  ├── tests/
-  └── docs/
+  pong_ai/
+├── include/utec/
+│   ├── algebra/tensor.h          # Biblioteca de álgebra tensorial
+│   ├── nn/                       # Framework de red neuronal
+│   │   ├── layer.h              # Interfaz base de capas
+│   │   ├── dense.h              # Capa densa (fully connected)
+│   │   ├── activation.h         # Funciones de activación (ReLU)
+│   │   ├── loss.h               # Funciones de pérdida (MSE)
+│   │   └── neural_network.h     # Red neuronal principal
+│   └── agent/
+│       └── PongAgent.h          # Agente y entorno de Pong
+├── src/utec/agent/
+│   └── PongAgent.cpp            # Implementación del agente
+├── tests/                       # Casos de prueba
+│   ├── test_tensor.cpp
+│   ├── test_neural_network.cpp
+│   └── test_agent_env.cpp
+├── benchmarks/                  # Pruebas de rendimiento
+│   └── performance_tests.cpp
+├── docs/                        # Documentación detallada
+│   └── BIBLIOGRAFIA.md
+├── main.cpp                     # Demostración completa
+└── CMakeLists.txt              # Configuración de compilación
   ```
 
 #### 2.2 Manual de uso y casos de prueba
