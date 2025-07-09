@@ -93,11 +93,10 @@ make run_tests  # Ejecutar suite de tests
 
 * **Patrones de diseño**: ejemplo: Factory para capas, Strategy para optimizadores.
 
-  
-* **Estructura de carpetas **:
+* **Estructura de carpetas**:
 
-  ```
-  pong_ai/
+```plaintext
+pong_ai/
 ├── include/utec/
 │   ├── algebra/tensor.h          # Biblioteca de álgebra tensorial
 │   ├── nn/                       # Framework de red neuronal
@@ -120,11 +119,10 @@ make run_tests  # Ejecutar suite de tests
 │   └── BIBLIOGRAFIA.md
 ├── main.cpp                     # Demostración completa
 └── CMakeLists.txt              # Configuración de compilación
-  ```
 
 #### 2.2 Manual de uso y casos de prueba
 
-* **Cómo ejecutar**: `./build/neural_net_demo input.csv output.csv`
+* **Cómo ejecutar**::./build/neural_net_demo input.csv output.csv`
 * **Casos de prueba**:
 
   * Test unitario de capa densa.
