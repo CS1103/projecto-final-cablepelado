@@ -241,9 +241,31 @@ Para trabajo futuro, se recomienda expandir el sistema con soporte GPU mediante 
 
 ### 7. Bibliografía
 
-> *Actualizar con bibliografia utilizada, al menos 4 referencias bibliograficas y usando formato IEEE de referencias bibliograficas.*
+1. Deep Reinforcement Learning
+* Mnih, V., et al. (2015). "Human-level control through deep reinforcement learning". Nature, 518(7540), 529-533.
+** Base teórica para el uso de redes neuronales profundas en juegos
+** Algoritmo DQN (Deep Q-Network) aplicable a Pong
+** Técnicas de experience replay implementadas en nuestro agente
+2. Neural Network Optimization
+* Kingma, D. P., & Ba, J. (2014). "Adam: A method for stochastic optimization". arXiv preprint arXiv:1412.6980.
+** Optimizador Adam para entrenamiento eficiente
+** Adaptive learning rates implementados en nuestro framework
+** Análisis de convergencia para redes neuronales
+3. Tensor Operations and Linear Algebra
+* Golub, G. H., & Van Loan, C. F. (2013). "Matrix computations" (4th ed.). Johns Hopkins University Press.
+** Fundamentos matemáticos para operaciones tensoriales
+** Algoritmos eficientes para broadcasting y transposición
+** Análisis de complejidad computacional
+4. C++ Template Metaprogramming
+* Vandevoorde, D., Josuttis, N. M., & Gregor, D. (2017). "C++ Templates: The Complete Guide" (2nd ed.). Addison-Wesley.
+** Diseño de templates genéricos para Tensor<T, Rank>
+** Técnicas de optimización en tiempo de compilación
+** SFINAE y concepts para type safety
 
----
+5. Papers de Referencia:
+* Atari Domain: Bellemare, M. G., et al. (2013). "The arcade learning environment: An evaluation platform for general agents". JAIR, 47, 253-279.
+* Policy Gradient Methods: Williams, R. J. (1992). "Simple statistical gradient-following algorithms for connectionist reinforcement learning". Machine learning, 8(3-4), 229-256.
+* Function Approximation: Tsitsiklis, J. N., & Van Roy, B. (1997). "An analysis of temporal-difference learning with function approximation". IEEE transactions on automatic control, 42(5), 674-690.
 
 ### Licencia
 
