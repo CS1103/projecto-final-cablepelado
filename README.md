@@ -120,6 +120,9 @@ pong_ai/
 ├── main.cpp                     # Demostración completa
 └── CMakeLists.txt              # Configuración de compilación
 
+ ```````
+
+
 #### 2.2 Manual de uso y casos de prueba
 
 * **Cómo ejecutar**::./build/neural_net_demo input.csv output.csv`
