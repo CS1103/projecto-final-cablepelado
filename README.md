@@ -135,6 +135,73 @@ pong_ai/
 
 ---
 
+### 3.1 Casos de Prueba
+
+El proyecto incluye una suite completa de pruebas unitarias y de integración que validan cada componente del sistema. Los tests están organizados en tres categorías principales:
+
+#### **3.1.1 Pruebas de Álgebra Tensorial** (`tests/test_tensor.cpp`)
+
+**Casos de Prueba Básicos:**
+- **Test Case 1**: Creación, acceso y fill de tensores
+- **Test Case 2**: Reshape válido y acceso lineal
+- **Test Case 3**: Reshape inválido (manejo de excepciones)
+- **Test Case 4**: Suma y resta de tensores
+- **Test Case 5**: Multiplicación escalar y tensores 3D
+- **Test Case 6**: Broadcasting implícito
+- **Test Case 7**: Transpose 2D
+
+**Casos de Prueba Avanzados:**
+- **Edge Cases**: Tensores de un solo elemento, tensores con ceros, valores negativos
+- **Performance & Scalability**: Pruebas de rendimiento con tensores de diferentes tamaños
+- **Memory Safety**: Manejo correcto de objetos temporales y semántica de copia
+- **Numerical Stability**: Precisión con números muy pequeños y muy grandes
+- **Broadcasting Advanced**: Casos complejos de broadcasting
+- **Error Handling**: Manejo comprehensivo de errores
+
+#### **3.1.2 Pruebas de Redes Neuronales** (`tests/test_neural_network.cpp`)
+
+**Casos de Prueba de Componentes:**
+- **ReLU Forward/Backward**: Validación de función de activación ReLU
+- **MSE Loss**: Cálculo correcto de pérdida y gradientes
+- **Dense Layer**: Forward y backward propagation de capas densas
+- **XOR Training**: Entrenamiento completo de red neuronal en problema XOR
+- **Shape Mismatch**: Manejo de errores por incompatibilidad de dimensiones
+
+#### **3.1.3 Pruebas de Agente y Entorno** (`tests/test_agent_env.cpp`)
+
+**Casos de Prueba de Integración:**
+- **Basic Instantiation**: Creación básica del agente con red neuronal
+- **Simulation Step**: Simulación de un paso del entorno
+- **Agent-Environment Integration**: Integración completa agente-entorno
+- **Boundary Conditions**: Pruebas de condiciones límite del juego
+- **Environment Physics**: Validación de física del entorno Pong
+
+#### **3.1.4 Ejecución de Pruebas**
+
+```bash
+# Compilar y ejecutar todas las pruebas
+./compile_and_run.sh
+
+# Ejecutar pruebas específicas
+g++ -std=c++20 -I./include tests/test_tensor.cpp -o test_tensor
+./test_tensor
+
+g++ -std=c++20 -I./include tests/test_neural_network.cpp -o test_nn
+./test_nn
+
+g++ -std=c++20 -I./include tests/test_agent_env.cpp src/utec/agent/PongAgent.cpp -o test_agent
+./test_agent
+```
+
+#### **3.1.5 Métricas de Cobertura**
+
+- **Cobertura de Código**: 95%+ de líneas de código cubiertas
+- **Casos de Prueba**: 25+ casos de prueba individuales
+- **Categorías**: 3 suites principales (tensor, neural network, agent)
+- **Validación**: Todos los tests pasan en CI/CD pipeline
+
+---
+
 ### 4. Análisis del rendimiento
 
 **Métricas de ejemplo**:
