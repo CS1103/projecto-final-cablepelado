@@ -27,11 +27,11 @@ Este proyecto implementa un **agente de IA completo para jugar Pong** usando C++
 * **Integrantes**:
 
   * Juan Marcelo Ferreyra Gonzales – 202410166 (Responsable de investigación teórica)
-  * Diego Mauricio Alarcon Valle – 209900002 (Desarrollo de la arquitectura)
+  * Diego Mauricio Alarcon Valle – 202410104 (Desarrollo de la arquitectura)
   * Mathias Rolando Castro Alba – 209900003 (Implementación del modelo)
-  * Joaquin ALberto Mercado Guerra – 209900004 (Pruebas y benchmarking)
+  * Joaquin ALberto Mercado Guerra – 202410202 (Pruebas y benchmarking)
   * Marco Joaquin Soto Maceda – 209900005 (Documentación y demo)
-  * Valentino Alonso Contreras Traverso - - 
+  * Valentino Alonso Contreras Traverso - 202410203 - 
 ---
 
 ### Requisitos e instalación
