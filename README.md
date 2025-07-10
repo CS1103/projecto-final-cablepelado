@@ -208,7 +208,7 @@ pong_ai/
 | Investigación teórica     | Juan Ferreyra | Documentar bases teóricas/Readme |
 | Diseño de la arquitectura | Alumno B | UML y esquemas de clases  |
 | Implementación del modelo | Alumno C | Código C++ de la NN       |
-| Pruebas y benchmarking    | Alumno D | Generación de métricas    |
+| Pruebas y benchmarking    | Joaquin Mercado | Generación de métricas    |
 | Documentación y demo      | Alumno E | Tutorial y video demo     |
 
 
