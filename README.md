@@ -31,7 +31,7 @@ Este proyecto implementa un **agente de IA completo para jugar Pong** usando C++
   * Mathias Rolando Castro Alba – 209900003 (Implementación del modelo)
   * Joaquin ALberto Mercado Guerra – 202410202 (Pruebas y benchmarking)
   * Marco Joaquin Soto Maceda – 209900005 (Documentación y demo)
-  * Valentino Alonso Contreras Traverso - 202410203 - 
+  * Valentino Alonso Contreras Traverso - 202410203 - (Pruebas y benchmarking)
 ---
 
 ### Requisitos e instalación
