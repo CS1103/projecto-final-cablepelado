@@ -30,7 +30,7 @@ Este proyecto implementa un **agente de IA completo para jugar Pong** usando C++
   * Diego Mauricio Alarcon Ballivian – 202410104 (Desarrollo de la arquitectura)
   * Mathias Rolando Castro Alva – 202410164 (Implementación del modelo)
   * Joaquin ALberto Mercado Guerra – 202410202 (Pruebas y benchmarking)
-  * Marco Joaquin Soto Maceda – 209900005 (Documentación y demo)
+  * Marco Joaquin Soto Maceda –  (Documentación y demo)
   * Valentino Alonso Contreras Traverso - 202410203 - (Pruebas y benchmarking)
 ---
 
@@ -127,28 +127,11 @@ pong_ai/
 
  ```````
 
-
-#### 2.2 Manual de uso y casos de prueba
-
-* **Cómo ejecutar**::./build/neural_net_demo input.csv output.csv`
-* **Casos de prueba**:
-
-  * Test unitario de capa densa.
-  * Test de función de activación ReLU.
-  * Test de convergencia en dataset de ejemplo.
-
-> *Personalizar rutas, comandos y casos reales.*
-
 ---
 
 ### 3. Ejecución
 
-> **Demo de ejemplo**: Video/demo alojado en `docs/demo.mp4`.
-> Pasos:
->
-> 1. Preparar datos de entrenamiento (formato CSV).
-> 2. Ejecutar comando de entrenamiento.
-> 3. Evaluar resultados con script de validación.
+> **Demo de ejemplo**: Video/demo alojado en `docs/demo.mp4`
 
 ---
 
@@ -266,9 +249,3 @@ Para trabajo futuro, se recomienda expandir el sistema con soporte GPU mediante 
 * Atari Domain: Bellemare, M. G., et al. (2013). "The arcade learning environment: An evaluation platform for general agents". JAIR, 47, 253-279.
 * Policy Gradient Methods: Williams, R. J. (1992). "Simple statistical gradient-following algorithms for connectionist reinforcement learning". Machine learning, 8(3-4), 229-256.
 * Function Approximation: Tsitsiklis, J. N., & Van Roy, B. (1997). "An analysis of temporal-difference learning with function approximation". IEEE transactions on automatic control, 42(5), 674-690.
-
-### Licencia
-
-Este proyecto usa la licencia **MIT**. Ver [LICENSE](LICENSE) para detalles.
-
----
